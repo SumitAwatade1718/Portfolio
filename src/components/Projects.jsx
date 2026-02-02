@@ -5,60 +5,28 @@ import "./projects.css";
 
 const PROJECTS = [
   {
-    title: "🩺 Mammogram Malignancy Detector",
-    desc: "Hybrid CNN + YOLOv8 ensemble for full-image breast cancer detection with ROI preprocessing and sliding-window inference.",
-    ss: "/mamo.png",
-    tech: ["TensorFlow", "Keras", "OpenCV", "YOLOv8"],
+    title: "👨‍🏫 Student Management System",
+    desc: "Developed a full-stack web application for efficient student data management. Implemented features for student registration, course enrollment, grade tracking, and administrative functions. Utilized React for a dynamic and responsive frontend, Node.js for a robust backend API, and MongoDB for flexible data storage. Designed an intuitive user interface to streamline academic operations for both students and faculty.",
+    ss: "/student.png", // Assuming you'll add an image for this
+    tech: ["React", "Node.js", "MongoDB"],
     live: "#",
-    code: "https://github.com/kunjdesai/mammo-detector",
+    code: "#",
   },
   {
-    title: "🧠 Mental Health Analyzer",
-    desc: "NLP-based system that analyzes user text for anxiety, stress, and depression indicators.",
-    ss: "/mentalhealth.jpg",
-    tech: ["Python", "Transformers", "NLTK", "scikit-learn"],
-    live: "https://mental-health-analyzer.streamlit.app/",
-    code: "https://github.com/kunj2803/Mental-Health-Analyzer",
-  },
-  {
-    title: "🤖 Indian Sign Language Interpreter",
-    desc: "Real-time gesture recognition using Mediapipe + TensorFlow for sign-to-text translation.",
-    ss: "/ISL.png",
-    tech: ["Mediapipe", "TensorFlow", "React", "Flask"],
+    title: "📧 Bulk Email Service Provider",
+    desc: "A Web application for sending bulk emails to many recipients quickly. Supports creating email content, managing contact lists, and keeping logs of sent emails. Useful for marketing, announcements, and notifications. Designing a user-friendly GUI for smooth and engaging user experiences.",
+    ss: "/email.png", // Assuming you'll add an image for this
+    tech: ["PHP", "MySQL", "SMTP", "PHP Mailer", "HTML", "CSS", "JavaScript"],
     live: "#",
-    code: "https://github.com/kunjdesai/ISL-Interpreter",
+    code: "#",
   },
   {
-    title: "💼 Portfolio Website",
-    desc: "Modern portfolio built with React + Framer Motion with smooth animations and clean UI.",
-    ss: "/portfolio.jpg",
-    tech: ["React", "Framer Motion", "Tailwind CSS"],
-    live: "https://kunj-desai.vercel.app/",
-    code: "https://github.com/kunj2803/Kunj-Portfolio",
-  },
-  {
-    title: "💬 DocuChat – Gemini AI Chatbot",
-    desc: "Gemini-powered PDF analyzer that answers queries from uploaded documents.",
-    ss: "/Docuchat.png",
-    tech: ["Gemini API", "LangChain", "Python", "Streamlit"],
-    live: "https://docuchat-chatbot.streamlit.app/",
-    code: "https://github.com/kunj2803/Docuchat-Chatbot",
-  },
-  {
-    title: "📊 ProfileX – Data Profiler",
-    desc: "Smart data profiling dashboard for CSV datasets — summary, visualization, and cleaning.",
-    ss: "/ProfileX.png",
-    tech: ["Streamlit", "Pandas", "Plotly"],
-    live: "https://profilex.streamlit.app/",
-    code: "https://github.com/kunjdesai/ProfileX",
-  },
-  {
-    title: "🧬 Breast Cancer Prediction",
-    desc: "ML pipeline using SVC, RF, and XGBoost with SMOTE for dataset balancing.",
-    ss: "/breastpred.jpg",
-    tech: ["scikit-learn", "XGBoost", "Pandas"],
+    title: "❤️ SmartHealth Monitoring System",
+    desc: "Developed a full-stack AI/ML-based platform to predict and prevent water-borne disease outbreaks. Built RESTful APIs using Fast-API and SQL health report management, and alert generation. Implemented Random Forest–based disease prediction engine to classify outbreak risk levels with probability scores. Designed interactive dashboards using React.Js for real-time visualization of outbreak trends and hotspots.",
+    ss: "/health.png", // Assuming you'll add an image for this
+    tech: ["Python", "Fast-API", "React.Js", "SQL", "Machine Learning"],
     live: "#",
-    code: "https://github.com/kunjdesai/BreastCancerPrediction",
+    code: "#",
   },
 ];
 
@@ -99,7 +67,7 @@ export default function Projects() {
             visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
         >
-          A collection of my major works — blending research, AI innovation.
+          A collection of my major works — blending research, and innovation.
         </motion.p>
 
         {/* Grid */}

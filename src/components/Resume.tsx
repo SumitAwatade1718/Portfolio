@@ -44,7 +44,7 @@ export function Resume() {
           viewport={{ once: true }}
           className="resume-download-top"
         >
-          <a href="/resume.pdf" download className="download-btn">
+          <a href="/CSE SUMIT AWATADE.pdf" download className="download-btn">
             <Download size={20} />
             Download Resume
           </a>
@@ -65,7 +65,7 @@ export function Resume() {
             transition={{ duration: 0.6 }}
             className="profile-name"
           >
-            Kunj D. Desai
+            Sumit Awatade
           </motion.h3>
 
           <motion.p
@@ -75,9 +75,9 @@ export function Resume() {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="profile-info"
           >
-            📚 B.Tech — Artificial Intelligence & Data Science<br />
-            📍 Surat, Gujarat, India<br />
-            📩 kunjd2803@gmail.com | 📱 +91 8758209508
+            📚 B.Tech — Computer Science Engineering<br />
+            📍 Pune, Maharashtra, India<br />
+            📩 awatadesumit1718@gmail.com
           </motion.p>
 
           <motion.p
@@ -87,9 +87,8 @@ export function Resume() {
             transition={{ delay: 0.35, duration: 0.7 }}
             className="profile-summary"
           >
-            Passionate AI engineer experienced in Computer Vision, Deep Learning,
-            and end-to-end AI deployment. Skilled in Python, TensorFlow, PyTorch,
-            and always driven to build impactful solutions.
+            Passionate developer experienced in web technologies, AI, and problem-solving.
+            Skilled in Python, JavaScript, React, and always driven to build impactful solutions.
           </motion.p>
         </motion.div>
 
@@ -123,24 +122,24 @@ export function Resume() {
           </div>
 
           <div className="resume-list">
-            {[
+            {            [
               {
-                degree: "B.Tech in Artificial Intelligence & Data Science",
-                school: "S.C.E.T — Sarvajanik University, Surat",
-                period: "2022 – 2026",
-                detail: "Current GPA: 9.0",
+                degree: "B. Tech in Computer Science and Engineering (Pursuing)",
+                school: "SKN Sinhgad College of Engineering, Pandharpur - 413304",
+                period: "Nov 2022 - June 2026",
+                detail: "CGPA: 9.69",
               },
               {
-                degree: "Higher Secondary (12th)",
-                school: "RSM Poonawala School",
-                period: "2020 – 2022",
-                detail: "78%",
+                degree: "Higher Secondary XII (Science)",
+                school: "Shivane Madhyamik and Jr. College Shivane, Sangola – 413307",
+                period: "2021-2022",
+                detail: "Percentage: 81.33%",
               },
               {
-                degree: "Secondary (10th)",
-                school: "Ambika Niketan School",
-                period: "2019 – 2020",
-                detail: "85%",
+                degree: "Secondary X (Science)",
+                school: "Shivane Madhyamik and Jr. College Shivane, Sangola – 413307",
+                period: "2019-2020",
+                detail: "Percentage: 91.20%",
               },
             ].map((edu, i) => (
               <motion.div
@@ -174,31 +173,14 @@ export function Resume() {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="icon-box project-icon"
+             
             >
-              <Laptop className="icon" />
+             
             </motion.div>
-            <h3>Projects</h3>
+            
           </div>
 
-          <ul className="project-list">
-            {[
-              "- Breast Cancer Detection using YOLO + Ensemble CNN",
-              "- DocuChat – Document Q&A Chatbot (Gemini API)",
-              "- Indian Sign Language Interpreter — in progress",
-              "- Mental Health Analyzer using NLP",
-            ].map((project, i) => (
-              <motion.li
-                key={i}
-                initial={{ opacity: 0, x: -25 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                {project}
-              </motion.li>
-            ))}
-          </ul>
+          
         </motion.div>
 
         {/* SKILLS */}
@@ -224,9 +206,11 @@ export function Resume() {
 
           <div className="skill-tags">
             {[
-              "Python","C","C++","Java","TensorFlow","PyTorch","OpenCV",
-              "Scikit-learn","YOLO","Streamlit","React","MySQL",
-              "MongoDB","NLP","ML","DL","XAI","Creativity","Teamwork"
+              "Python","C","Java","HTML","CSS","JavaScript","React","MySQL",
+              "MongoDB","Git","GitHub","Data Structures & Algorithms","Machine Learning",
+              "Deep Learning","Computer Networks","Operating System","Cloud",
+              "Database Management System","Teamwork","Problem Solving",
+              "Creativity","Adaptability","Communication"
             ].map((skill, i) => (
               <motion.span
                 key={skill}

@@ -4,7 +4,6 @@ import {
   Timer,
   Cpu,
   Trophy,
-  Gamepad2,
 } from "lucide-react";
 
 import "./About.css";
@@ -101,10 +100,10 @@ export function About() {
 
   /* ===== COUNTERS ===== */
   const counters = [
-    { icon: Code, label: "Projects Completed", value: 7 },
-    { icon: Timer, label: "Years Experience in Ai", value: 2 },
-    { icon: Cpu, label: "Technologies Mastered", value: 10 },
-    { icon: Trophy, label: "LeetCode Solved", value: 1000 },
+    { icon: Code, label: "Projects Completed", value: 4 },
+    { icon: Trophy, label: "Times University Ranker for University Exam", value: 2 },
+    { icon: Cpu, label: "Technologies Mastered", value: 3 },
+    { icon: Trophy, label: "LeetCode Solved", value: 100 },
   ];
 
   const [countValues, setCountValues] = useState(counters.map(() => 0));
@@ -185,19 +184,20 @@ export function About() {
               </h2>
 
               <p>
-                I’m Kunj Desai, a tech-driven learner passionate about building real-world solutions.
-                I enjoy exploring AI, machine learning, and innovative software development.
+                I’m Sumit Awatade, a tech-driven learner passionate about building robust and scalable solutions.
+                I enjoy exploring various technologies across the full stack, from frontend to backend, and database management.
                 I’m eager to contribute my skills and grow in a challenging professional environment.
               </p>
 
               <p>
-                Beyond code, I enjoy exploring design, experimenting with motion and interaction,
+                Beyond code, I enjoy exploring design, experimenting with modern web technologies, 
                 blending creativity with technical precision. My goal is to build solutions that not only perform — but also inspire.
               </p>
 
               <p>
-                4th-year B.Tech AI Engineering student with hands-on experience in ML & DL Projects.
-                Proficient in Python, PyTorch, TensorFlow, and data preprocessing. Seeking internship opportunities to contribute to impactful AI solutions.
+                A Full Stack Developer with hands-on experience in building web applications using React, Node.js, and PHP.
+                Proficient in MySQL and MongoDB, with a strong understanding of data structures and algorithms.
+                Seeking opportunities to contribute to impactful projects in the IT sector.
               </p>
             </div>
           </div>
@@ -221,10 +221,9 @@ export function About() {
       <div className={`about-hobbies ${hobbiesVisible ? "hobbies-show" : "hobbies-hidden"}`}>
         <h2>Hobbies</h2>
         <div className="hobby-grid">
-          <div className="hobby">🎧 Listening to Music</div>
-          <div className="hobby">📷 Photography</div>
+          <div className="hobby">Drawing</div>
           <div className="hobby">🎮 Gaming</div>
-          <div className="hobby">🏀 Sports & Fitness</div>
+          <div className="hobby">🏀 Sports</div>
         </div>
       </div>
     </section>

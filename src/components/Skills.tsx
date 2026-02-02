@@ -4,13 +4,12 @@ import "./Skills.css";
 
 interface SkillRow {
   title: string;
-  items: { name: string; level: number }[];
+  items: { name: string; }[];
 }
 
 const SKILLS = [
   { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
   { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
-  { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
   { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
   { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
@@ -19,9 +18,8 @@ const SKILLS = [
   { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
   { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-  { name: "TensorFlow", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
-  { name: "PyTorch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-  { name: "OpenCV", logo: "https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" },
+  { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
 ];
 
 const ROWS: SkillRow[][] = [
@@ -29,35 +27,28 @@ const ROWS: SkillRow[][] = [
     {
       title: "Programming Languages",
       items: [
-        { name: "Python", level: 95 },
-        { name: "C", level: 80 },
-        { name: "C++", level: 85 },
-        { name: "Java", level: 70 },
+        { name: "Python" },
+        { name: "C" },
+        { name: "Java" },
       ],
     },
     {
       title: "Web Technologies",
       items: [
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "React", level: 80 },
+        { name: "HTML" },
+        { name: "CSS" },
+        { name: "JavaScript" },
+        { name: "React" },
+        { name: "PHP" },
       ],
     },
     {
       title: "Databases & Tools",
       items: [
-        { name: "MySQL", level: 80 },
-        { name: "MongoDB", level: 75 },
-        { name: "Git", level: 85 },
-      ],
-    },
-    {
-      title: "Frameworks & Libraries",
-      items: [
-        { name: "TensorFlow", level: 70 },
-        { name: "PyTorch", level: 75 },
-        { name: "OpenCV", level: 80 },
+        { name: "MySQL" },
+        { name: "MongoDB" },
+        { name: "Git" },
+        { name: "GitHub" },
       ],
     },
   ],
@@ -65,21 +56,23 @@ const ROWS: SkillRow[][] = [
     {
       title: "Core Concepts",
       items: [
-        { name: "Data Structures & Algorithms", level: 95 },
-        { name: "Machine Learning", level: 90 },
-        { name: "Deep Learning", level: 88 },
-        { name: "YOLO Object Detection", level: 80 },
-        { name: "Explainable AI (XAI)", level: 75 },
+        { name: "Data Structures & Algorithms" },
+        { name: "Machine Learning" },
+        { name: "Deep Learning" },
+        { name: "Computer Networks" },
+        { name: "Operating System" },
+        { name: "Cloud" },
+        { name: "Database Management System" },
       ],
     },
     {
       title: "Soft Skills",
       items: [
-        { name: "Teamwork", level: 90 },
-        { name: "Problem Solving", level: 95 },
-        { name: "Creativity", level: 92 },
-        { name: "Adaptability", level: 88 },
-        { name: "Communication", level: 85 },
+        { name: "Teamwork" },
+        { name: "Problem Solving" },
+        { name: "Creativity" },
+        { name: "Adaptability" },
+        { name: "Communication" },
       ],
     },
   ],
@@ -192,15 +185,15 @@ export const Skills: React.FC = () => {
                 <h3>{col.title}</h3>
                 <ul>
                   {col.items.map((item, j) => (
-                    <li key={j} className="skill-item">
+                    <motion.li
+                      key={j}
+                      className="skill-item"
+                      whileHover={{ scale: 1.05 }}
+                    >
                       <div className="skill-item-header">
                         <span>{item.name}</span>
-                        <span className="skill-percent">{item.level}%</span>
                       </div>
-                      <div className="skill-progress">
-                        <div className="skill-progress-fill" style={{ width: `${item.level}%` }} />
-                      </div>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </motion.div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Phone, Send, Github, Linkedin, Instagram, MessageCircle } from "lucide-react";
 
 export function Contact() {
@@ -26,7 +26,7 @@ export function Contact() {
       return;
     }
 
-    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(form.email)) {
       setStatus("⚠️ Enter a valid email address.");
       return;
@@ -52,24 +52,24 @@ export function Contact() {
         setForm({ name: "", email: "", subject: "", message: "" });
         setSending(false);
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("EmailJS error:", error);
         setStatus("❌ Failed to send message. Please try again.");
         setSending(false);
       });
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "kunjd2803@gmail.com" },
-    { icon: Phone, label: "Phone", value: "+91 8758209508" },
-    { icon: MapPin, label: "Location", value: "Surat, Gujarat, India" },
+    { icon: Mail, label: "Email", value: "awatadesumit1718@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+91 8767102098" },
+    { icon: MapPin, label: "Location", value: "Maharashtra, India" },
   ];
 
   const quickLinks = [
-    { icon: Github, url: "https://github.com/kunj2803" },
-    { icon: Linkedin, url: "https://www.linkedin.com/in/kunj-desai-07717b293/" },
-    { icon: Mail, url: "mailto:kunjd2803@gmail.com" },
-    { icon: MessageCircle, url: "https://wa.me/+918758209508" },
-    { icon: Instagram, url: "https://www.instagram.com/kunj_2834/" },
+    { icon: Github, url: "https://github.com/SumitAwatade1718" },
+    { icon: Linkedin, url: "https://www.linkedin.com/in/sumit-awatade-938622275/" },
+    { icon: Mail, url: "mailto:awatadesumit1718@gmail.com" },
+    { icon: MessageCircle, url: "https://wa.me/918767102098" },
   ];
 
   return (
@@ -97,14 +97,11 @@ export function Contact() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl dark:text-white mb-6">
-              Let’s Connect & Collaborate{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                🤝
-              </span>
+              Let's Connect and discuss opportunities!
             </h3>
 
             <p className="text-gray-600 dark:text-white/70 mb-8">
-              Whether it’s a new project or collaboration — I’d love to hear from you!
+              I am actively seeking opportunities in the IT sector. Let's connect!
             </p>
 
             {/* CONTACT INFO */}
@@ -181,7 +178,7 @@ export function Contact() {
                 value={form.subject}
                 onChange={handleChange}
                 className="w-full px-6 py-4 bg-white/50 dark:bg-white/5 border rounded-xl"
-                placeholder="Project Discussion"
+                placeholder="Placement Opportunity"
               />
 
               <label className="text-gray-700 dark:text-white/80 block">Message</label>
@@ -191,7 +188,7 @@ export function Contact() {
                 value={form.message}
                 onChange={handleChange}
                 className="w-full px-6 py-4 bg-white/50 dark:bg-white/5 border rounded-xl"
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about the opportunity..."
               />
 
               <motion.button

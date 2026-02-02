@@ -6,8 +6,6 @@ import "./Home.css";
 const githubLogo = "/github.png";
 const linkedinLogo = "/linkedin.png";
 const gmailLogo = "/gmail.png";
-const instagramLogo = "/insta.png";
-const facebookLogo = "/facebook.png";
 const leetcodeLogo = "/leetcode.png";
 const whatsappLogo = "/whatsapp.png";
 
@@ -17,28 +15,25 @@ interface HeroProps {
 
 export function Home({ theme }: HeroProps) {
   const roles = [
-    "AI Enthusiast",
-    "Machine Learning Engineer",
-    "Deep Learning Expert",
-    "Computer Vision Researcher",
-    "Developer",
+    "Full Stack Developer",
+    "Web Developer",
+    "SQL Developer",
+    "Tech Explorer",
   ];
 
   const connectLinks = [
-    { img: linkedinLogo, link: "https://www.linkedin.com/in/kunj-desai-07717b293/" },
-    { img: gmailLogo, link: "mailto:kunjd2803@gmail.com" },
+    { img: linkedinLogo, link: "https://www.linkedin.com/in/sumit-awatade-938622275/" },
+    { img: gmailLogo, link: "mailto:awatadesumit1718@gmail.com" },
     { img: whatsappLogo, link: "https://wa.me/+918758209508" },
-    { img: instagramLogo, link: "https://www.instagram.com/kunj_2834/" },
-    { img: facebookLogo, link: "https://www.facebook.com/kunj.desai.222608" },
   ];
 
   const workLinks = [
-    { img: githubLogo, link: "https://github.com/kunj2803" },
-    { img: leetcodeLogo, link: "https://leetcode.com/u/Kunj_2803" },
+    { img: githubLogo, link: "https://github.com/SumitAwatade1718" },
+    { img: leetcodeLogo, link: "https://leetcode.com/u/sumit1718/" },
   ];
 
   const [typedRoles, setTypedRoles] = useState("");
-  const rolesText = "Artificial Intelligence Engineer | Frontend Developer | Tech Explorer";
+  const rolesText = "Full Stack Developer | Tech Explorer | SQL Developer";
 
   useEffect(() => {
     let i = 0;
@@ -73,7 +68,7 @@ export function Home({ theme }: HeroProps) {
       <motion.div className="hero-content" variants={containerVariants} initial="hidden" animate="visible">
         <motion.h1 className="hero-name" variants={itemVariants}>
           Hi! I’m <br />
-          <span className="gradient-text hero-name-line">KUNJ DESAI</span>
+          <span className="gradient-text hero-name-line">Sumit Awatade</span>
           <motion.div className="hero-line" variants={itemVariants} />
         </motion.h1>
 
@@ -82,9 +77,9 @@ export function Home({ theme }: HeroProps) {
         </motion.p>
 
         <motion.p className="hero-intro" variants={itemVariants}>
-          Creating AI-powered solutions. 
-          Building modern web experiences. 
-          Solving real-world problems with technology.
+          Crafting robust full-stack applications.
+          Building intuitive and performant web experiences.
+          Solving complex challenges with elegant code.
         </motion.p>
 
         <motion.div className="hero-roles" variants={itemVariants}>
@@ -97,13 +92,21 @@ export function Home({ theme }: HeroProps) {
 
         <motion.div className="hero-info" variants={itemVariants}>
           {[
-            { label: "📍 Location", value: "Surat, Gujarat, India" },
-            { label: "💼 Expertise", value: "AI/ML, Problem Solving" },
-            { label: "📞 Contact", value: "kunjd2803@gmail.com" },
+            { label: "📍 Location", value: "Pune, Maharashtra, India" },
+            { label: "💼 Expertise", value: "Web Development, React, Node.js, PHP, Problem Solving" },
+            { label: "📞 Contact", value: "awatadesumit1718@gmail.com" },
           ].map((info, i) => (
             <motion.div key={i} className="info-card" whileHover={{ scale: 1.05, y: -3 }} variants={itemVariants}>
               <h4>{info.label}</h4>
-              <p>{info.value}</p>
+              <p>
+                {info.label === "📞 Contact" ? (
+                  <a href={`mailto:${info.value}`} className="text-blue-500 dark:text-purple-400 hover:underline">
+                    {info.value}
+                  </a>
+                ) : (
+                  info.value
+                )}
+              </p>
             </motion.div>
           ))}
         </motion.div>
