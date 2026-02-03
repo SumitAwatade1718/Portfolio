@@ -41,10 +41,10 @@ To run this project locally:
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/SumitAwatade1718/Sumit_Portfolio.git
+git clone https://github.com/SumitAwatade1718/Portfolio.git
 
 # 2️⃣ Navigate to project directory
-cd Sumit_Portfolio
+cd Portfolio
 
 # 3️⃣ Install dependencies
 npm install
